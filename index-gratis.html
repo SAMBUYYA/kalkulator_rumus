@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang=id>
+<head>
+<meta name=author content="Mas Ayyub Al Fajar">
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet href=index.css>
+<script src=index.js defer></script>
+<script src=!/js/bahasa_indonesia.js></script>
+<script src=../!/js/salin_selanjutnya.js></script>
+</head>
+<body>
+<div id=matahari></div>
+<div id=awan1 class=awan></div>
+<div id=awan2 class=awan></div>
+<div id=awan3 class=awan></div>
+<div id=awan4 class=awan></div>
+<div id=awan5 class=awan></div>
+<div id=awan6 class=awan></div>
+<section id=bagian_masukan style="height:100vh;padding-bottom:50px;border-bottom:3px solid #000">
+<div id=markah>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_panjang/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_panjang/index.html",perbarui()'>
+<div id=konversi_panjang_judul class=kalkulator_kepala>Panjang</div>
+<div id=konversi_panjang_keterangan class=kalkulator_paragraf>Kilometer, Meter, Centimeter, Inci, Yard, Nanometer, Gigameter</div>
+</div>
+<div onclick='simpan("konversi_panjang")'>
+<img id=konversi_panjang class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_luas/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_luas/index.html",perbarui()'>
+<div id=konversi_luas_judul class=kalkulator_kepala>Luas</div>
+<div id=konversi_luas_keterangan class=kalkulator_paragraf>Meter Persegi, Hektar, Kilometer Persegi</div>
+</div>
+<div onclick='simpan("konversi_luas")'>
+<img id=konversi_luas class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_volume/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_volume/index.html",perbarui()'>
+<div id=konversi_volume_judul class=kalkulator_kepala>Volume</div>
+<div id=konversi_volume_keterangan class=kalkulator_paragraf>Meter Kubik, Hektometer Kubik, Kilometer Kubik</div>
+</div>
+<div onclick='simpan("konversi_volume")'>
+<img id=konversi_volume class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_massa/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_massa/index.html",perbarui()'>
+<div id=konversi_massa_judul class=kalkulator_kepala>Massa</div>
+<div id=konversi_massa_keterangan class=kalkulator_paragraf>Kilogram, Gram, Miligram, Centigram, Metrik Ton</div>
+</div>
+<div onclick='simpan("konversi_massa")'>
+<img id=konversi_massa class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_waktu/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_waktu/index.html",perbarui()'>
+<div id=konversi_waktu_judul class=kalkulator_kepala>Waktu</div>
+<div id=konversi_waktu_keterangan class=kalkulator_paragraf>Hari, Jam, Menit, Detik</div>
+</div>
+<div onclick='simpan("konversi_waktu")'>
+<img id=konversi_waktu class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_zona_waktu/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_zona_waktu/index.html",perbarui()'>
+<div id=konversi_zona_waktu_judul class=kalkulator_kepala>Zona Waktu</div>
+<div id=konversi_zona_waktu_keterangan class=kalkulator_paragraf>UTC-2, UTC-1, UTC+0, UTC+1, UTC+2, UTC+3</div>
+</div>
+<div onclick='simpan("konversi_zona_waktu")'>
+<img id=konversi_zona_waktu class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_tekanan/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_tekanan/index.html",perbarui()'>
+<div id=konversi_tekanan_judul class=kalkulator_kepala>Tekanan</div>
+<div id=konversi_tekanan_keterangan class=kalkulator_paragraf>Pascal, Atmosfer, Bar, PSI</div>
+</div>
+<div onclick='simpan("konversi_tekanan")'>
+<img id=konversi_tekanan class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_kecepatan/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_kecepatan/index.html",perbarui()'>
+<div id=konversi_kecepatan_judul class=kalkulator_kepala>Kecepatan</div>
+<div id=konversi_kecepatan_keterangan class=kalkulator_paragraf>m/s, ft/s, km/h, mph</div>
+</div>
+<div onclick='simpan("konversi_kecepatan")'>
+<img id=konversi_kecepatan class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_sudut/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_sudut/index.html",perbarui()'>
+<div id=konversi_sudut_judul class=kalkulator_kepala>Sudut</div>
+<div id=konversi_sudut_keterangan class=kalkulator_paragraf>Derajat, Radian, Gradian, Putaran</div>
+</div>
+<div onclick='simpan("konversi_sudut")'>
+<img id=konversi_sudut class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_suhu/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_suhu/index.html",perbarui()'>
+<div id=konversi_suhu_judul class=kalkulator_kepala>Suhu</div>
+<div id=konversi_suhu_keterangan class=kalkulator_paragraf>Celsius, Fahrenheit, Reaumur, Kelvin</div>
+</div>
+<div onclick='simpan("konversi_suhu")'>
+<img id=konversi_suhu class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_daya/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_daya/index.html",perbarui()'>
+<div id=konversi_daya_judul class=kalkulator_kepala>Daya</div>
+<div id=konversi_daya_keterangan class=kalkulator_paragraf>Watt, hp, ft-lb/min</div>
+</div>
+<div onclick='simpan("konversi_daya")'>
+<img id=konversi_daya class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_sistem_bilangan/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_sistem_bilangan/index.html",perbarui()'>
+<div id=konversi_sistem_bilangan_judul class=kalkulator_kepala>Sistem Bilangan</div>
+<div id=konversi_sistem_bilangan_keterangan class=kalkulator_paragraf>Desimal, Biner, Oktal, Heksadesimal</div>
+</div>
+<div onclick='simpan("konversi_sistem_bilangan")'>
+<img id=konversi_sistem_bilangan class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_data/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_data/index.html",perbarui()'>
+<div id=konversi_data_judul class=kalkulator_kepala>Data</div>
+<div id=konversi_data_keterangan class=kalkulator_paragraf>bit, Bita, kilobit, Kilobita</div>
+</div>
+<div onclick='simpan("konversi_data")'>
+<img id=konversi_data class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="konversi_bilangan_romawi/index.html",perbarui()'>
+<img loading=lazy src=!/logo/repeat-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="konversi_bilangan_romawi/index.html",perbarui()'>
+<div id=konversi_bilangan_romawi_judul class=kalkulator_kepala> Bilangan Romawi</div>
+<div id=konversi_bilangan_romawi_keterangan class=kalkulator_paragraf>Desimal, I, V, X, L, C, D, M, Ī, V̄, X̄, L̄, C̄, D̄, M̄</div>
+</div>
+<div onclick='simpan("konversi_bilangan_romawi")'>
+<img id=konversi_bilangan_romawi class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="hitung_penyederhanaan_akar_kuadrat/index.html",perbarui()'>
+<img loading=lazy src=!/logo/calculator-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="hitung_penyederhanaan_akar_kuadrat/index.html",perbarui()'>
+<div id=hitung_penyederhanaan_akar_kuadrat_judul class=kalkulator_kepala>Penyederhanaan Akar Kuadrat</div>
+<div id=hitung_penyederhanaan_akar_kuadrat_keterangan class=kalkulator_paragraf>2, 2√3, 5√2, 5√5</div>
+</div>
+<div onclick='simpan("hitung_penyederhanaan_akar_kuadrat")'>
+<img id=hitung_penyederhanaan_akar_kuadrat class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="hitung_penyederhanaan_pecahan/index.html",perbarui()'>
+<img loading=lazy src=!/logo/calculator-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="hitung_penyederhanaan_pecahan/index.html",perbarui()'>
+<div id=hitung_penyederhanaan_pecahan_judul class=kalkulator_kepala>Penyederhanaan Pecahan</div>
+<div id=hitung_penyederhanaan_pecahan_keterangan class=kalkulator_paragraf>11/12, 1/2, 7/8, (1)2/3</div>
+</div>
+<div onclick='simpan("hitung_penyederhanaan_pecahan")'>
+<img id=hitung_penyederhanaan_pecahan class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="hitung_pythagoras/index.html",perbarui()'>
+<img loading=lazy src=!/logo/calculator-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="hitung_pythagoras/index.html",perbarui()'>
+<div id=hitung_pythagoras_judul class=kalkulator_kepala>Pythagoras</div>
+<div id=hitung_pythagoras_keterangan class=kalkulator_paragraf>Miring, Tinggi, Alas</div>
+</div>
+<div onclick='simpan("hitung_pythagoras")'>
+<img id=hitung_pythagoras class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<details>
+<summary>
+<div class=kalkulator_daftar>
+<div class=kalkulator_logo>
+<img loading=lazy src=!/logo/list-ul-solid.svg>
+</div>
+<div class=kalkulator_judul_daftar>
+<div id=hitung_bangun_datar_judul class=kalkulator_kepala>Bangun Datar</div>
+<div id=hitung_bangun_datar_keterangan class=kalkulator_paragraf>Persegi, Persegi Panjang, Segitiga, Lingkaran</div>
+</div>
+</div>
+</summary>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="hitung_persegi/index.html",perbarui()'>
+<img loading=lazy src=!/logo/calculator-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="hitung_persegi/index.html",perbarui()'>
+<div id=hitung_persegi_judul class=kalkulator_kepala>Persegi</div>
+<div id=hitung_persegi_keterangan class=kalkulator_paragraf>Sisi, Luas, Keliling</div>
+</div>
+<div onclick='simpan("hitung_persegi")'>
+<img id=hitung_persegi class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="hitung_persegi_panjang/index.html",perbarui()'>
+<img loading=lazy src=!/logo/calculator-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="hitung_persegi_panjang/index.html",perbarui()'>
+<div id=hitung_persegi_panjang_judul class=kalkulator_kepala>Persegi Panjang</div>
+<div id=hitung_persegi_panjang_keterangan class=kalkulator_paragraf>Panjang, Lebar, Luas, Keliling</div>
+</div>
+<div onclick='simpan("hitung_persegi_panjang")'>
+<img id=hitung_persegi_panjang class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="hitung_segitiga_sama_sisi/index.html",perbarui()'>
+<img loading=lazy src=!/logo/calculator-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="hitung_segitiga_sama_sisi/index.html",perbarui()'>
+<div id=hitung_segitiga_sama_sisi_judul class=kalkulator_kepala>Segitiga Sama Sisi</div>
+<div id=hitung_segitiga_sama_sisi_keterangan class=kalkulator_paragraf>Sisi, Keliling, Luas</div>
+</div>
+<div onclick='simpan("hitung_segitiga_sama_sisi")'>
+<img id=hitung_segitiga_sama_sisi class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="hitung_lingkaran/index.html",perbarui()'>
+<img loading=lazy src=!/logo/calculator-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="hitung_lingkaran/index.html",perbarui()'>
+<div id=hitung_lingkaran_judul class=kalkulator_kepala>Lingkaran</div>
+<div id=hitung_lingkaran_keterangan class=kalkulator_paragraf>Jari - jari, Diameter, Keliling, Luas</div>
+</div>
+<div onclick='simpan("hitung_lingkaran")'>
+<img id=hitung_lingkaran class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+</details>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="tabel_sudut_istimewa_trigonometri/index.html",perbarui()'>
+<img loading=lazy src=!/logo/book-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="tabel_sudut_istimewa_trigonometri/index.html",perbarui()'>
+<div id=tabel_sudut_istimewa_trigonometri_judul class=kalkulator_kepala>Tabel Sudut Istimewa Trigonometri</div>
+<div id=tabel_sudut_istimewa_trigonometri_keterangan class=kalkulator_paragraf>Sin, Cos, Tan, Cosec, Sec, Cotan</div>
+</div>
+<div onclick='simpan("tabel_sudut_istimewa_trigonometri")'>
+<img id=tabel_sudut_istimewa_trigonometri class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+<div class=kalkulator>
+<div class=kalkulator_logo onclick='location.href="tabel_periodik/index.html",perbarui()'>
+<img loading=lazy src=!/logo/book-solid.svg>
+</div>
+<div class=kalkulator_judul onclick='location.href="tabel_periodik/index.html",perbarui()'>
+<div id=tabel_periodik_judul class=kalkulator_kepala>Tabel Periodik</div>
+<div id=tabel_periodik_keterangan class=kalkulator_paragraf>Nama Atom, Simbol Atom, Berat/Massa Atom</div>
+</div>
+<div onclick='simpan("tabel_periodik")'>
+<img id=tabel_periodik class=kalkulator_markah src=!/logo/star-regular.svg>
+</div>
+</div>
+</section>
+<button id=pengaturan>PENGATURAN</button>
+<section id=pengaturan_latar></section>
+<section id=pengaturan_isi>
+<label onclick='location.href="https://play.google.com/store/apps/details?id=id.my.bercamilan.kalkulator.rumus.pro"' class=pengaturan_nama style="width:calc(100% - 3px);text-align:center;background-color:#d3d3d3;cursor:pointer" id=versi_bayar>Tanpa Iklan - Rp 25.000,00</label>
+<label class=pengaturan_nama id=bahasa_bahasa for=bahasa_pilihan>Bahasa</label>
+<select class=pengaturan_pilihan id=bahasa_pilihan>
+<option id=bahasa_bawaan value=bawaan>Bawaan</option>
+<option id=bahasa_indonesia value=indonesia>Bahasa Indonesia</option>
+<option id=bahasa_inggris value=inggris>Bahasa Inggris</option>
+</select>
+<label class=pengaturan_nama id=ukuran_ukuran for=ukuran_pilihan>Hasil Ukuran</label>
+<select class=pengaturan_pilihan id=ukuran_pilihan>
+<option id=ukuran_bawaan value=bawaan>18 Piksel (Bawaan)</option>
+<option id=ukuran_25 value=25>25 Piksel</option>
+<option id=ukuran_30 value=30>30 Piksel</option>
+<option id=ukuran_35 value=35>35 Piksel</option>
+</select>
+<label class=pengaturan_nama id=desimal_digit_desimal for=desimal_digit_pilihan>Desimal Digit</label>
+<select class=pengaturan_pilihan id=desimal_digit_pilihan>
+<option id=desimal_digit_bawaan value=bawaan>3 Digit (Bawaan)</option>
+<option id=desimal_digit_tanpa_batas value=tanpa_batas>15 Digit</option>
+</select>
+<label class=pengaturan_nama id=desimal_tipe_desimal for=desimal_tipe_pilihan>Desimal Jenis</label>
+<select class=pengaturan_pilihan id=desimal_tipe_pilihan>
+<option id=desimal_tipe_bawaan value=bawaan>Bawaan</option>
+<option id=desimal_tipe_indonesia value=indonesia>1.234.567,89</option>
+<option id=desimal_tipe_inggris value=inggris>1,234,567.89</option>
+</select>
+<label class=pengaturan_nama id=pembuat>Pembuat</label>
+<button class=pengaturan_pilihan>BERCAMILAN</button>
+<label class=pengaturan_nama id=versi>Versi</label>
+<button class=pengaturan_pilihan>1.20.0.lite</button>
+<p id=pengaturan_keterangan>Tekan bagian gelap untuk menutup pengaturan</p>
+</section>
+</body>
+</html>
