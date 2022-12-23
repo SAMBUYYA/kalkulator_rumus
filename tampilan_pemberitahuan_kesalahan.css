@@ -1,1 +1,0 @@
-@keyframes kesalahan_animasi{0%,100%{opacity:0}25%,75%{opacity:1}}#kesalahan_id{position:fixed;top:50%;left:50%;width:95%;text-align:center;font-size:30px;color:red;background:#fff;padding:0;margin:0;transform:translate(-50%,-50%);animation:.9s kesalahan_animasi;z-index:99}
