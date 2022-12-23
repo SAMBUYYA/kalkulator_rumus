@@ -1,0 +1,1 @@
+function awalan(){awal=document.getElementById("hasil"),angka_penunjuk=1234567.89,bahasa_indonesia()?awal.innerHTML="format baca = "+angka_huruf(angka_penunjuk):awal.innerHTML="format read = "+angka_huruf(angka_penunjuk),awal.innerHTML+="<br>",awal.innerHTML+="<br>"}
