@@ -1,0 +1,1 @@
+function bagian_hasil(){var a=document.getElementById("bagian_masukan"),n=document.getElementById("bagian_hasil");a.style.display="none",n.style.display="block",ukuran_saat_ini()}function bagian_masukan(){var a=document.getElementById("bagian_masukan"),n=document.getElementById("bagian_hasil");a.style.display="block",n.style.display="none"}
