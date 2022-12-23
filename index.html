@@ -6,8 +6,14 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet href=index.css>
 <script src=index.js defer></script>
-<script src=!/js/bahasa_indonesia.js></script>
+<script src=../!/js/bahasa_indonesia.js></script>
+<script src=../!/js/angka_tetap_dan_huruf.js></script>
 <script src=../!/js/salin_selanjutnya.js></script>
+<script src=../!/js/pemberitahuan_kesalahan.js defer></script>
+<script src=../!/js/awalan_format_baca.js defer></script>
+<script src=../!/js/hilang_dan_tampil.js defer></script>
+<script src=../!/js/pencarian_hasil.js defer></script>
+<script src=../!/js/salin.js defer></script>
 </head>
 <body>
 <div id=matahari></div>
@@ -17,67 +23,57 @@
 <div id=awan4 class=awan></div>
 <div id=awan5 class=awan></div>
 <div id=awan6 class=awan></div>
-<section id=bagian_masukan style="height:100vh;padding-bottom:50px;border-bottom:3px solid #000">
-<div id=markah>
+<section id=bagian_masukan>
+<div id=masukan>
+<div id=masukan_nilai>
+<div id=bagian_input>
+<input placeholder=" " type=number id=panjang_nilai><label for=panjang_nilai id=panjang_label>Nilai Panjang</label>
 </div>
-<div class=kalkulator>
-<div class=kalkulator_logo onclick='location.href="konversi_panjang/index.html",perbarui()'>
-<img loading=lazy src=!/logo/repeat-solid.svg>
-</div>
-<div class=kalkulator_judul onclick='location.href="konversi_panjang/index.html",perbarui()'>
-<div id=konversi_panjang_judul class=kalkulator_kepala>Panjang</div>
-<div id=konversi_panjang_keterangan class=kalkulator_paragraf>Kilometer, Meter, Centimeter, Inci, Yard, Nanometer, Gigameter</div>
-</div>
-<div onclick='simpan("konversi_panjang")'>
-<img id=konversi_panjang class=kalkulator_markah src=!/logo/star-regular.svg>
-</div>
-</div>
-<div class=kalkulator>
-<div class=kalkulator_logo onclick='location.href="konversi_luas/index.html",perbarui()'>
-<img loading=lazy src=!/logo/repeat-solid.svg>
-</div>
-<div class=kalkulator_judul onclick='location.href="konversi_luas/index.html",perbarui()'>
-<div id=konversi_luas_judul class=kalkulator_kepala>Luas</div>
-<div id=konversi_luas_keterangan class=kalkulator_paragraf>Meter Persegi, Hektar, Kilometer Persegi</div>
-</div>
-<div onclick='simpan("konversi_luas")'>
-<img id=konversi_luas class=kalkulator_markah src=!/logo/star-regular.svg>
+<select id=panjang_jenis>
+<option id=pilihan_panjang value=panjang>Jenis Panjang</option>
+<option id=pilihan_gigameter value=gigameter>Gm (Gigameter)</option>
+<option id=pilihan_megameter value=megameter>Mm (Megameter)</option>
+<option id=pilihan_kilometer value=kilometer>km (Kilometer)</option>
+<option id=pilihan_hektometer value=hektometer>hm (Hektometer)</option>
+<option id=pilihan_dekameter value=dekameter>dam (Dekameter)</option>
+<option id=pilihan_meter value=meter>m (Meter)</option>
+<option id=pilihan_desimeter value=desimeter>dm (Desimeter)</option>
+<option id=pilihan_centimeter value=centimeter>cm (Centimeter)</option>
+<option id=pilihan_milimeter value=milimeter>mm (Milimeter)</option>
+<option id=pilihan_mikrometer value=mikrometer>µm (Mikrometer)</option>
+<option id=pilihan_nanometer value=nanometer>nm (Nanometer)</option>
+<option id=pilihan_inci value=inci>in (Inci)</option>
+<option id=pilihan_yard value=yard>yd (Yard)</option>
+<option id=pilihan_kaki value=kaki>ft (Kaki)</option>
+</select>
 </div>
 </div>
+<button id=hitung class=tombol>HITUNG</button>
 </section>
-<button id=pengaturan>PENGATURAN</button>
-<section id=pengaturan_latar></section>
-<section id=pengaturan_isi>
-<label onclick='location.href="https://play.google.com/store/apps/details?id=id.my.bercamilan.kalkulator.rumus.pro"' class=pengaturan_nama style="width:calc(100% - 3px);text-align:center;background-color:#d3d3d3;cursor:pointer" id=versi_bayar>Tanpa Iklan - Rp 25.000,00</label>
-<label class=pengaturan_nama id=bahasa_bahasa for=bahasa_pilihan>Bahasa</label>
-<select class=pengaturan_pilihan id=bahasa_pilihan>
-<option id=bahasa_bawaan value=bawaan>Bawaan</option>
-<option id=bahasa_indonesia value=indonesia>Bahasa Indonesia</option>
-<option id=bahasa_inggris value=inggris>Bahasa Inggris</option>
+<section id=bagian_hasil>
+<div>
+<p id=hasil></p>
+</div>
+<select id=cari class=tombol_cari>
+<option id=pilihan_cari value=format>Cari</option>
+<option id=cari_gigameter value=gigameter>Gm (Gigameter)</option>
+<option id=cari_megameter value=megameter>Mm (Megameter)</option>
+<option id=cari_kilometer value=kilometer>km (Kilometer)</option>
+<option id=cari_hektometer value=hektometer>hm (Hektometer)</option>
+<option id=cari_dekameter value=dekameter>dam (Dekameter)</option>
+<option id=cari_meter value=meter>m (Meter)</option>
+<option id=cari_desimeter value=desimeter>dm (Desimeter)</option>
+<option id=cari_centimeter value=centimeter>cm (Centimeter)</option>
+<option id=cari_milimeter value=milimeter>mm (Milimeter)</option>
+<option id=cari_mikrometer value=mikrometer>µm (Mikrometer)</option>
+<option id=cari_nanometer value=nanometer>nm (Nanometer)</option>
+<option id=cari_inci value=inci>in (Inci)</option>
+<option id=cari_yard value=yard>yd (Yard)</option>
+<option id=cari_kaki value=kaki>ft (Kaki)</option>
 </select>
-<label class=pengaturan_nama id=ukuran_ukuran for=ukuran_pilihan>Hasil Ukuran</label>
-<select class=pengaturan_pilihan id=ukuran_pilihan>
-<option id=ukuran_bawaan value=bawaan>18 Piksel (Bawaan)</option>
-<option id=ukuran_25 value=25>25 Piksel</option>
-<option id=ukuran_30 value=30>30 Piksel</option>
-<option id=ukuran_35 value=35>35 Piksel</option>
-</select>
-<label class=pengaturan_nama id=desimal_digit_desimal for=desimal_digit_pilihan>Desimal Digit</label>
-<select class=pengaturan_pilihan id=desimal_digit_pilihan>
-<option id=desimal_digit_bawaan value=bawaan>3 Digit (Bawaan)</option>
-<option id=desimal_digit_tanpa_batas value=tanpa_batas>15 Digit</option>
-</select>
-<label class=pengaturan_nama id=desimal_tipe_desimal for=desimal_tipe_pilihan>Desimal Jenis</label>
-<select class=pengaturan_pilihan id=desimal_tipe_pilihan>
-<option id=desimal_tipe_bawaan value=bawaan>Bawaan</option>
-<option id=desimal_tipe_indonesia value=indonesia>1.234.567,89</option>
-<option id=desimal_tipe_inggris value=inggris>1,234,567.89</option>
-</select>
-<label class=pengaturan_nama id=pembuat>Pembuat</label>
-<button class=pengaturan_pilihan>BERCAMILAN</button>
-<label class=pengaturan_nama id=versi>Versi</label>
-<button class=pengaturan_pilihan>1.20.0.lite</button>
-<p id=pengaturan_keterangan>Tekan bagian gelap untuk menutup pengaturan</p>
+<button id=salin class=tombol_cara>SALIN CARA</button>
+<button id=hitung_ulang class=tombol>HITUNG ULANG</button>
 </section>
+<button id=kembali onclick='location.href="../index.html"' class=tombol_kembali>KEMBALI</button>
 </body>
 </html>
